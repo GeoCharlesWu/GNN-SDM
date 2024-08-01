@@ -18,6 +18,8 @@ Run `dist\HLNGNN\HLNGNN.exe` to predict the distribution of habitat suitability 
 
 ## HLN-GNN interface
 ![](HLNGNN_interface.png)
+The software and source code of HLN-GNN can be downloaded from the following link:
+https://drive.google.com/drive/folders/19_MSaooZRyuKxvo2xaAWDi25_fSB7flJ?usp=sharing
 
 ## Predicting habitat suitability by HLN-GNN
 ![](predictions.png)
