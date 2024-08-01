@@ -17,7 +17,7 @@ Run the `1Aggregate_patches.R` script to generate patch matrices within the spec
 Run `dist\HLNGNN\HLNGNN.exe` to predict the distribution of habitat suitability based on the species range polygon. For detailed instructions, refer to `Tutorial_step2_Predict_the_suitability_probability_by_HLN_GNN.pdf`.
 
 # HLN-GNN interface
-
+![](HLNGNN_interface.png)
 
 #Predicting habitat suitability by HLN-GNN
-
+![](predictions.png)
