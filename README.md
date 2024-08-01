@@ -19,5 +19,5 @@ Run `dist\HLNGNN\HLNGNN.exe` to predict the distribution of habitat suitability 
 # HLN-GNN interface
 ![](HLNGNN_interface.png)
 
-#Predicting habitat suitability by HLN-GNN
+# Predicting habitat suitability by HLN-GNN
 ![](predictions.png)
