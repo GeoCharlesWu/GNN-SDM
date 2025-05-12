@@ -1,25 +1,34 @@
-# Heterogeneous Landscape Network-based Graph Neural Network (HLN-GNN)
+# Graph Neural Network-based Species Distribution Model (GNN-SDM)
 
-HLN-GNN is a habitat suitability prediction framework based on complex patch networks and graph neural networks. HLN-GNN operates on patch matrices generated through environmental layer clustering. This approach represents diverse ecological patches as an interactive network, then extracts knowledge from known species distribution ranges to predict suitability probabilities in unexplored areas.
+GNN-SDM (Graph Neural Network-based Species Distribution Model)：
+This framework is a species distribution modeling framework that uses spatial polygon data representing species distribution ranges as input and incorporates landscape patches to account for complex environmental features and landscape patterns. 
 
-The entire process consists of four parts: input the species distribution data, create patch networks, GNN-based feature extraction and model training, and suitability probability prediction for unexplored regions. By integrating niche theory into graph neural networks (GNNs), HLN-GNN can identify ecological patterns that traditional species distribution models (SDMs) often fail to detect.
+## GNN-SDM workflow
+GNN-SDM is a framework for species distribution modeling that leverages spatial polygon data representing known species ranges and information extracted from heterogeneous landscape patches. This method predicts the probability of species occurrence or habitat suitability by incorporating both the structure and contextual information of landscape patches within a species’ known distribution range. The process begins by representing the terrestrial environment as a landscape patch matrix composed of patches of varying sizes and shapes, using a method called Self-Organizing Map (SOM). These patches serve as ecologically homogeneous units that better capture the spatial patterns of the landscape. By establishing adjacency relationships among these patches and constructing an adjacency matrix, the environmental rasters are transformed into a patch-based graph network. This graph supports the integration of a Graph Neural Network (GNN) into the species distribution modeling framework. GNN-SDM enables the propagation of information across connected patches, allowing the model to learn how species respond to specific ecological landscapes and improving the ecological expressiveness of predictions.
 
-## HLN-GNN Software (version 1.0)
+Species often rely on distinct habitat patches to perform key biological processes such as foraging, reproduction, sheltering, and dispersal. These diverse combinations of patch functions reflect the target species’ specific ecological requirements. Within this framework, patches located inside the species’ known range are encoded as “presence” patches, representing occurrences. These patches are assumed to contain the critical resources necessary for the species’ survival. Using the labeled “presence” patches, their environmental features, and the adjacency matrix, a GNN model is trained to learn the species’ habitat preferences. Finally, the trained model is applied to all patches across the study area to predict the probability of species presence or the habitat suitability score for each patch.
 
-To apply HLN-GNN, you need to follow these two steps:
 
-### 1. Generate Ecological Patch Matrices through an Unsupervised Clustering Process
+## GNN-SDM Program (version 1.0)
 
-Run the `1Aggregate_patches.R` script to generate patch matrices within the specified study area. For detailed instructions, refer to `Tutorial_step1_Generate_patch_matrix.pdf`.
+There are two steps required to apply GNN-SDM:
 
-### 2. Predict Habitat Suitability Using HLN-GNN
+### 1. Generate a landscape patch matrix using an unsupervised clustering algorithm.
 
-Run `dist\HLNGNN\HLNGNN.exe` to predict the distribution of habitat suitability based on the species range polygon. For detailed instructions, refer to `Tutorial_step2_Predict_the_suitability_probability_by_HLN_GNN.pdf`.
+Run the `step_1 Generate landscape patch.R` script to generate a landscape patch matrix within the defined study area. For detailed instructions, please refer to the `GNNSDM_Tutorial.pdf`.
 
-## HLN-GNN interface
-![](HLNGNN_interface.png)
-The software and source code of HLN-GNN can be downloaded from the following link:
+### 2. Species distribution modeling using GNN-SDM
+
+Run `GNN_SDM.exe` to predict habitat suitability or distribution probability for species based on range polygon data, which can be obtained from the IUCN Red List website (https://www.iucnredlist.org/). For detailed instructions, please refer to `GNNSDM_Tutorial.pdf`.
+
+## GNN-SDM interface
+
+The GNN-SDM program with a graphical user interface, along with its source code, is available at the following link:
 https://drive.google.com/drive/folders/19_MSaooZRyuKxvo2xaAWDi25_fSB7flJ?usp=sharing
 
-## Predicting habitat suitability by HLN-GNN
-![](predictions.png)
+![GNNSDM interface](GNNSDM_interface.png)
+
+## Predicting habitat suitability by GNN-SDM
+
+<img src="predictions.png" alt="GNN-SDM Framework" width="600" height="820"/>
+
