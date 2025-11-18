@@ -9,24 +9,10 @@ GNN-SDM is a framework for species distribution modeling that leverages spatial 
 Species often rely on distinct habitat patches to perform key biological processes such as foraging, reproduction, sheltering, and dispersal. These diverse combinations of patch functions reflect the target species’ specific ecological requirements. Within this framework, patches located inside the species’ known range are encoded as “presence” patches, representing occurrences. These patches are assumed to contain the critical resources necessary for the species’ survival. Using the labeled “presence” patches, their environmental features, and the adjacency matrix, a GNN model is trained to learn the species’ habitat preferences. Finally, the trained model is applied to all patches across the study area to predict the probability of species presence or the habitat suitability score for each patch.
 
 
-## GNN-SDM Program (version 1.0)
+## GNN-SDM Program
 
-There are two steps required to apply GNN-SDM:
-
-### 1. Generate a landscape patch matrix using an unsupervised clustering algorithm.
-
-Run the `step_1 Generate landscape patch.R` script to generate a landscape patch matrix within the defined study area. For detailed instructions, please refer to the `GNNSDM_Tutorial.pdf`.
-
-### 2. Species distribution modeling using GNN-SDM
-
-Run `GNN_SDM.exe` to predict habitat suitability or distribution probability for species based on range polygon data, which can be obtained from the IUCN Red List website (https://www.iucnredlist.org/). For detailed instructions, please refer to `GNNSDM_Tutorial.pdf`.
-
-## GNN-SDM interface
-
-The GNN-SDM program with a graphical user interface, along with its source code, is available at the following link:
+The GNN-SDM program, along with its source code, is available at the following link:
 https://drive.google.com/drive/folders/10WiHlGlaD53Cmixa3YlBY-K7ahIZggak?usp=sharing
-
-![GNNSDM interface](GNNSDM_interface.png)
 
 ## Predicting habitat suitability by GNN-SDM
 
